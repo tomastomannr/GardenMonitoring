@@ -3,9 +3,7 @@ package com.toman.raspberry.monitoring.service.impl;
 import com.toman.raspberry.monitoring.service.DataService;
 import com.toman.raspberry.monitoring.service.MeasuringService;
 import com.toman.raspberry.monitoring.service.MonitoringService;
-import com.toman.raspberry.monitoring.model.MeasuringDataBO;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import com.toman.raspberry.monitoring.model.MeasuringDO;
 
 //@Service
 public class MonitoringServiceImpl implements MonitoringService {
@@ -22,7 +20,7 @@ public class MonitoringServiceImpl implements MonitoringService {
     @Override
     public void scheduledMeasuring() {
         //call measurement on sensors and get data
-        final MeasuringDataBO measuringData = measuringService.measure();
+        final MeasuringDO measuringData = measuringService.measure();
 
         //send data to cloud
         dataService.pushData(measuringData);

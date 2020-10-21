@@ -1,9 +1,14 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/communicationservices?noAccessToProcedureBodies=true&useUnicode=true&characterEncoding=UTF-8
-    username: root
-    password: root
-    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://localhost/:3306/garden_monitoring?noAccessToProcedureBodies=true&useUnicode=true&characterEncoding=UTF-8
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.106/garden_monitoring?noAccessToProcedureBodies=true&useUnicode=true&characterEncoding=UTF-8
+    username: garden_monitor
+    password: w6Uwm7zHzHLTFqcF
+    driver-class-name: com.mysql.jdbc.Driver
+#    driver-class-name: com.mysql.cj.jdbc.Driver
 #  jpa:
 #    generate-ddl: false
 #    hibernate:

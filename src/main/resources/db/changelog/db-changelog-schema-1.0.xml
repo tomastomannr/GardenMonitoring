@@ -1,51 +1,21 @@
 <?xml version="1.1" encoding="UTF-8" standalone="no"?>
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
-    <changeSet author="tomas.toman (manual)" id="1588150018765-1">
-        <createTable tableName="communicationasdfasdfasdfasdfasd">
-            <column name="uid" type="VARCHAR(36)">
+    <changeSet author="tomas.toman" id="1603306576307-1">
+        <createTable tableName="measuring">
+            <column name="id" type="INT" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="message_id" type="VARCHAR(36)">
+            <column name="sensor_id" type="VARCHAR(72)">
                 <constraints nullable="false"/>
             </column>
-            <column name="message_type" type="VARCHAR(100)">
+            <column name="sensor_name" type="VARCHAR(36)">
                 <constraints nullable="false"/>
             </column>
-            <column name="claim_ref" type="VARCHAR(24)">
+            <column name="temperature" type="DECIMAL(2, 2)">
                 <constraints nullable="false"/>
             </column>
-            <column name="receeve_claim_ref" type="VARCHAR(36)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="request_id" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="message_url" type="VARCHAR(255)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="provider_name" type="VARCHAR(36)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="content_template" type="VARCHAR(64)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="relation_uid" type="VARCHAR(64)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="dm_customer_number" type="BIGINT">
-                <constraints nullable="false"/>
-            </column>
-            <column name="loan_number" type="VARCHAR(64)">
-                <constraints nullable="false"/>
-            </column>
-            <column name="dm_account_number" type="BIGINT">
-                <constraints nullable="false"/>
-            </column>
-            <column name="communication_type" type="VARCHAR(10)">
-                <constraints nullable="false"/>
-            </column>
-            <column defaultValueComputed="CURRENT_TIMESTAMP" name="creation_date" type="TIMESTAMP">
+            <column defaultValueComputed="CURRENT_TIMESTAMP" name="timestamp" type="TIMESTAMP">
                 <constraints nullable="false"/>
             </column>
         </createTable>

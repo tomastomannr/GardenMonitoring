@@ -1,7 +1,7 @@
 package com.toman.raspberry.monitoring.service;
 
-import com.toman.raspberry.monitoring.model.MeasuringDataBO;
+import com.toman.raspberry.monitoring.model.MeasuringDO;
 
 public interface DataService {
-    void pushData(MeasuringDataBO measuringDataBO);
+    void pushData(MeasuringDO measuringDO);
 }
