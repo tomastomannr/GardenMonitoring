@@ -1,7 +1,7 @@
 package com.toman.raspberry.monitoring.service;
 
-import com.toman.raspberry.monitoring.model.MeasuringDO;
+import com.toman.raspberry.monitoring.model.SensorDataDO;
 
 public interface MeasuringService {
-    public MeasuringDO measure();
+    public SensorDataDO measure();
 }

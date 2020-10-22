@@ -2,7 +2,7 @@
 <databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
     <changeSet author="tomas.toman" id="1603306576307-1">
-        <createTable tableName="measuring">
+        <createTable tableName="sensor_data">
             <column name="id" type="INT" autoIncrement="true">
                 <constraints primaryKey="true"/>
             </column>
@@ -12,10 +12,10 @@
             <column name="sensor_name" type="VARCHAR(36)">
                 <constraints nullable="false"/>
             </column>
-            <column name="temperature" type="DECIMAL(2, 2)">
+            <column name="temperature" type="DECIMAL(10, 2)">
                 <constraints nullable="false"/>
             </column>
-            <column defaultValueComputed="CURRENT_TIMESTAMP" name="timestamp" type="TIMESTAMP">
+            <column name="timestamp" type="DATETIME">
                 <constraints nullable="false"/>
             </column>
         </createTable>
